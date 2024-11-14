@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/api/v1/movies")
+@CrossOrigin(origins = "http://localhost:3000")
 public class MovieController {
     @Autowired
     private MovieService movieService;
