@@ -60,7 +60,13 @@
 			<artifactId>spring-dotenv</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-	</dependencies>
+	
+   <dependency>
+     <groupId>com.h2database</groupId>
+     <artifactId>h2</artifactId>
+     <version>1.4.199</version>
+   </dependency>
+ </dependencies>
 
 	<build>
 		<plugins>

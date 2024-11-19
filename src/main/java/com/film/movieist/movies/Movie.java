@@ -1,14 +1,15 @@
 package com.film.movieist.movies;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Document(collection = "movies")
 @Data
@@ -27,7 +28,7 @@ public class Movie {
     @DocumentReference
     private List<Review> reviews;
 
-    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> backdrops, List<String> genres) {
+    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> backdrops, List<String> genres, List<String> reviewIds) {
         this.imdbId = imdbId;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -35,5 +36,5 @@ public class Movie {
         this.poster = poster;
         this.backdrops = backdrops;
         this.genres = genres;
-    }
+   }
 }
